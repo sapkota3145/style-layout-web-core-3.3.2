@@ -1,0 +1,153 @@
+@media (min-width:769px) {
+  .header {
+    max-width: 1119px;
+  }
+
+  .header__chat,
+  .header__call,
+  .header__profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__logo {
+    margin-right: 250px;
+  }
+
+  .body {
+    max-width: 1119px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 416px;
+    background-color:#F8F8F8;
+  }
+
+  .header__action {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .header__action-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .body__menu {
+    display: flex;
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .body__menu > * {
+    flex: 1 1 25%;            
+    min-width: 0;             /* SUPER IMPORTANT!!! */
+    white-space: normal;      /* text can break into 2 lines */
+  }
+
+  .body__menu .b3,
+  .body__menu .b4,
+  .body__menu .b6 {
+    display: inline-block; 
+  }
+
+  .body__action {
+    display: none;
+  }
+
+   .container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+  }
+
+  .body__photo {
+    width: 360px;
+    height: 208px;
+  }
+
+  .only-tablet {
+     display: block;
+     margin:10px 10px 10px 0;
+     }
+}
+
+
+@media (min-width:1120px) {
+  .header {
+    min-width: 1120px;
+    background-color:#F8F8F8;
+  }
+
+   /* hide mobile icons */ 
+   .header__menu,
+   .header__logo,
+   .header__call,
+   .header__chat,
+   .header__profile,
+   .header__divider,
+   .header__repair,
+   .header__status {
+     display: none;
+   }
+
+    .body__action {
+    display: flex;
+    gap: 16px;
+  }
+
+  .body__menu .b1,
+  .body__menu .b7 {
+    display: inline-block;
+  }
+
+  .body__menu {
+    min-width: 1120px;
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+
+  /* desktop button style */
+  .header__action {
+    gap: 8px;
+  }
+
+  .header__action--request,
+  .header__action--status {
+    margin: 5px;
+    padding: 0 0 20px 0;
+  }
+
+  .only-tablet {
+    display: none;
+  } 
+
+  /* push the two buttons to the right */
+  .header {
+    justify-content: flex-end;
+    gap: 2px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+  }
+
+  .body__container {
+    display: flex;
+    gap: 490px;
+  }
+
+  .only-desktop {
+    display: block;
+    margin:15px 0px;
+  }
+}
+
+  
