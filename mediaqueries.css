@@ -40,20 +40,16 @@
   
   .body__menu {
     display: flex;
-    overflow: visible;
-    white-space: normal;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    /* row-gap: 10px; */
+    /* white-space: normal; */
   }
 
   .body__menu > * {
     flex: 1 1 25%;            
     min-width: 0;             /* SUPER IMPORTANT!!! */
     white-space: normal;      /* text can break into 2 lines */
-  }
-
-  .body__menu .b3,
-  .body__menu .b4,
-  .body__menu .b6 {
-    display: inline-block; 
   }
 
   .body__action {
@@ -84,16 +80,8 @@
     background-color:#F8F8F8;
   }
 
-   /* hide mobile icons */ 
-   .header__menu,
-   .header__logo,
-   .header__call,
-   .header__chat,
-   .header__profile,
-   .header__divider,
-   .header__repair,
-   .header__status {
-     display: none;
+   .main-header {
+    display: none;
    }
 
     .body__action {
@@ -101,15 +89,13 @@
     gap: 16px;
   }
 
-  .body__menu .b1,
-  .body__menu .b7 {
-    display: inline-block;
-  }
-
   .body__menu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
     min-width: 1120px;
     flex-wrap: wrap;
-    overflow: visible;
+    /* overflow: visible; */
   }
 
   /* desktop button style */
@@ -141,7 +127,7 @@
 
   .body__container {
     display: flex;
-    gap: 490px;
+    gap: 450px;
   }
 
   .only-desktop {

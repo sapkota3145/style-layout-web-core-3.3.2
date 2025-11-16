@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+    * {
+    font-family: "TT Lakes Neue Trial", sans-serif;
 
-   * {
-    font-family:'Roboto', sans-serif ;
-   }
+  } 
   
-  .header {
+  .main-header {
     display: flex;
-    justify-content: space-around;  
+    flex-direction: row;
     align-items: center;       
     gap: 16px;                 
     min-width: 320px;
     max-width: 768px;
     height: 88px;
-    margin: 0 auto;
     padding: 0 16px;
+  }
+
+  .header__logo {
+    margin-right: auto;
   }
 
   .header__divider {
@@ -27,14 +29,8 @@
   .header__profile {
     display: none;
   }
-
-  /* hide text on phone + tablet */
-  /* .header__action-text {
-    display: none;
-  } */
   
-
-  .body {
+    .body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -42,13 +38,13 @@
     min-width: 320px;
     max-width: 768px;
     padding: 0 16px;
-    margin: 0 auto;
    background-color:#F8F8F8;
   }
 
   .body__title {
     margin:20px 0;
     font-size: 1.7rem;
+    font-weight: 700;
   }
 
   .body__divider {
@@ -68,8 +64,6 @@
     background: none;
     font-weight: 500;
     font-size: 16px;
-    font-family: "TT Lakes Neue Trial", sans-serif;
-    cursor: pointer;
     display: flex;
    align-items: center;
    }
@@ -81,21 +75,19 @@
    .body__menu {
     display: flex;
     justify-content: space-between;
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     width: 100%;
     min-width: 0;
    }
 
   .body__menu button {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-    flex: 0 0 auto;          /* stays in one row */
-    padding: 14px 20px;
+    flex: 0 0 auto;         
+    padding: 8px 16px;
     border: none;
-    background: #f5f5f5;
-    font-size: 14px;
-    flex-wrap: nowrap;
-    border: none;
+    background: none;
     }
 
 .body__menu button:hover,
@@ -117,15 +109,6 @@
 /* only for desktop */
 .body__action {
   display: none;
-}
-
-  /* only for tab */
-.body__menu .b1,
-.body__menu .b4,
-.body__menu .b5,
-.body__menu .b6,
-.body__menu .b7 { 
-  display: none; 
 }
 
 .only-tablet,
