@@ -10,11 +10,7 @@
     flex-direction: column;
   }
 
-  .header__logo {
-    margin-right: 250px;
-  }
-
-  .body {
+  .content {
     max-width: 1119px;
     display: flex;
     flex-direction: column;
@@ -38,19 +34,19 @@
     height: 40px;
   }
   
-  .body__menu {
+  .content__menu {
     display: flex;
     overflow-x: auto;
     flex-wrap: nowrap;
   }
 
-  .body__menu > * {
+  .content__menu > * {
     flex: 1 1 25%;            
     min-width: 0;             
     white-space: normal; 
   }
 
-  .body__action {
+  .content__action {
     display: none;
   }
 
@@ -74,36 +70,41 @@
 
 @media (min-width:1120px) {
   .header {
-    min-width: 1120px;
+    width: 100%;
     background-color:#F8F8F8;
+    margin: 0 auto;
   }
 
    .main-header {
     display: none;
    }
 
-    .body__action {
+  .content__action {
     display: flex;
     gap: 16px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
   }
 
-  .body__menu {
+  .content {
+    max-width: none;
+    width: 100%;
+  }
+
+  .content__menu {
     display: flex;
     justify-content: flex-start;
     gap: 24px;
-    min-width: 1120px;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: none;
+    background-color:#F8F8F8;
   }
 
   /* desktop button style */
   .header__action {
     gap: 8px;
-  }
-
-  .header__action--request,
-  .header__action--status {
-    margin: 5px;
-    padding: 0 0 20px 0;
   }
 
   .only-tablet {
@@ -120,6 +121,8 @@
     display: flex;
     flex-direction: row;
     margin: 20px 0;
+    background-color:#F8F8F8;
+    margin: 0 auto;
   }
 
   .body__container {

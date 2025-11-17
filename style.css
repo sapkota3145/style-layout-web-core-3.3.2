@@ -1,15 +1,24 @@
-    * {
-    font-family: "TT Lakes Neue Trial", sans-serif;
+ @font-face {
+  font-family: TT lakes Neue;
+  src: url(font/TT\ Lakes\ Neue\ Trial\ Bold.ttf);
+  font-weight: 700;
+ }
 
-  } 
-  
-  .main-header {
+ @font-face {
+  font-family: TT Lakes Neue;
+  src: url(font/TT\ Lakes\ Neue\ Trial\ Condensed\ Regular.ttf);
+  font-weight: 400;
+ }
+ 
+ * {
+  font-family: TT Lakes Neue;
+ }
+ .main-header {
     display: flex;
     flex-direction: row;
     align-items: center;       
     gap: 16px;                 
     min-width: 320px;
-    max-width: 768px;
     height: 88px;
     padding: 0 16px;
   }
@@ -30,21 +39,30 @@
     display: none;
   }
   
-    .body {
+    .content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     min-width: 320px;
-    max-width: 768px;
-    padding: 0 16px;
    background-color:#F8F8F8;
   }
 
-  .body__title {
+  .content__title {
     margin:20px 0;
     font-size: 1.7rem;
     font-weight: 700;
+    margin-left: 15px;
+  }
+
+  h1::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    width: 6px;
+    height: 32px;
+    background-color: #41F6D7;
+    border-radius: 0 6px 6px 0;
   }
 
   .body__divider {
@@ -55,6 +73,7 @@
 
   .body__text {
     margin: 0;
+    padding-left: 15px;
   }
 
   .readmore {
@@ -72,26 +91,25 @@
     margin-left: 10px;
    }
 
-   .body__menu {
+   .content__menu {
     display: flex;
     justify-content: space-between;
     overflow-x: auto;
-    scrollbar-width: none;
     flex-wrap: nowrap;
     white-space: nowrap;
     width: 100%;
     min-width: 0;
    }
 
-  .body__menu button {
+  .content__menu button {
     flex: 0 0 auto;         
     padding: 8px 16px;
-    border: none;
+    border: 2px solid transparent;
     background: none;
     }
 
-.body__menu button:hover,
-.body__menu button:focus {
+.content__menu button:hover,
+.content__menu button:focus {
   border: 2px solid #B8FFEC;
   border-radius: 8px;
   background-color: transparent;
@@ -107,7 +125,7 @@
 }
 
 /* only for desktop */
-.body__action {
+.content__action {
   display: none;
 }
 
